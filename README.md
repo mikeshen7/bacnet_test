@@ -12,5 +12,4 @@ git push origin main
 
 ## Packaging it up
 pyinstaller bacnetScanUtility.py
-
-
+pyinstaller --noconsole bacnetscanutility.py

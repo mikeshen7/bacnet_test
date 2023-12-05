@@ -134,9 +134,14 @@ def readAv(bacnet):
     config.read('settings.ini')
     avRange = config.get('bacnet', 'avRange').split(';')
 
+
     for avRange in avRange:
-        start, end = avRange.split('-')
-        startAV, endAV = int(start), int(end)
+        # Check if it's a single AV or a range
+        if '-' in avRange:
+            start, end = avRange.split('-')
+            startAV, endAV = int(start), int(end)
+        else:
+            startAV = endAV = int(avRange)
 
         for av_number in range(startAV, endAV + 1):
             av_values = []
@@ -179,8 +184,13 @@ def readBv(bacnet):
     bvRange = config.get('bacnet', 'bvRange').split(';')
 
     for bvRange in bvRange:
-        start, end = bvRange.split('-')
-        startBV, endBV = int(start), int(end)
+        # Check if it's a single AV or a range
+        if '-' in bvRange:
+            start, end = bvRange.split('-')
+            startBV, endBV = int(start), int(end)
+        else:
+            startBV = endBV = int(bvRange)
+
 
         for bv_number in range(startBV, endBV + 1):
             bv_values = []
@@ -202,7 +212,6 @@ def readBv(bacnet):
 
     return bv_df
 
-
 ### Other helper functions ###
 def highlight_outliers():
     file_path = os.path.join(os.getcwd(), 'av_values.xlsx')
@@ -217,18 +226,21 @@ def highlight_outliers():
         data.append(row)
 
     # Convert data to NumPy array
-    data = np.array(data[1:])  # Exclude header row
+    data = np.array(data[1:], dtype=np.float64)  # Exclude header row
 
     # Calculate standard deviation for each column
-    std_dev = np.std(data, axis=0)
-    mean = np.mean(data, axis=0)
+    std_dev = np.nanstd(data, axis=0)
+    mean = np.nanmean(data, axis=0)
 
     # Highlight cells that are more than 2 standard deviations away in red
-    red_fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")  # Red color fill
+    red_fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")
+    yellow_fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
 
     for col_index, (column, std, avg) in enumerate(zip(data.T, std_dev, mean), start=1):
         for cell_index, value in enumerate(column, start=2):
             cell = sheet.cell(row=cell_index, column=col_index)
+            if value > avg + 1 * std or value < avg - 1 * std:
+                cell.fill = yellow_fill
             if value > avg + 2 * std or value < avg - 2 * std:
                 cell.fill = red_fill
 
@@ -238,10 +250,9 @@ def highlight_outliers():
 
 def main():
     bacnet = bacnetInitialize()
-    deviceScan(bacnet)
+    # deviceScan(bacnet)
     readAv(bacnet)
     readBv(bacnet)
-
 
     return
 
