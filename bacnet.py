@@ -1,29 +1,29 @@
 import BAC0
-import time
-from BAC0.core.devices.local.models import (
-    analog_input,
-    analog_output,
-    analog_value,
-    binary_input,
-    binary_output,
-    binary_value,
-    character_string,
-    date_value,
-    datetime_value,
-    humidity_input,
-    humidity_value,
-    make_state_text,
-    multistate_input,
-    multistate_output,
-    multistate_value,
-    temperature_input,
-    temperature_value,
-)
+from BAC0.core.devices.local.models import (analog_input,analog_output,analog_value,binary_input,binary_output,binary_value,character_string,date_value,datetime_value,humidity_input,humidity_value,make_state_text,multistate_input,multistate_output,multistate_value,temperature_input,temperature_value,)
 from BAC0.core.devices.local.object import ObjectFactory
 import re
 import time
-import pandas as pd
 import configparser
+import openpyxl
+from openpyxl.styles import PatternFill
+import pandas as pd
+import numpy as np
+import os
+
+
+### Logging Settings ###
+# Silence (use CRITICAL so not much messages will be sent) 
+BAC0.log_level('silence') 
+
+# Verbose 
+# BAC0.log_level('info') 
+
+# # Default, Info on console….but Warning in file 
+# BAC0.log_level(log_file='info', stdout='info', stderr='critical')
+
+# Debug in file and console… this is a bad idea as the console will be filled 
+# BAC0.log_level(file='debug', stdout='debug', stderr='critical')
+
 
 ### CLASSES ###
 class Device:
@@ -39,14 +39,14 @@ class Device:
         return f"Device(deviceInstance={self.deviceInstance}, ipAddress={self.ipAddress}, net={self.net}, mac={self.mac})"
 
 
-### HELPER FUNCTIONS ###
+### BACnet FUNCTIONS ###
 def bacnetInitialize():
     config = configparser.ConfigParser()
     config.read('settings.ini')
     ipAddress = config.get('bacnet', 'ipAddress')
     udpPort = config.get('bacnet', 'udpPort')
     bacnet = BAC0.lite(ip=ipAddress, port=udpPort)
-    BAC0.log_level('error')
+    
     return bacnet
 
 def deviceScan(bacnet):
@@ -158,6 +158,8 @@ def readAv(bacnet):
     # Write AV values to a new Excel file
     av_df.to_excel('av_values.xlsx', index=False)
 
+    highlight_outliers()
+
     return av_df
 
 def readBv(bacnet):
@@ -201,11 +203,45 @@ def readBv(bacnet):
     return bv_df
 
 
+### Other helper functions ###
+def highlight_outliers():
+    file_path = os.path.join(os.getcwd(), 'av_values.xlsx')
+
+    # Load the workbook
+    wb = openpyxl.load_workbook(file_path)
+    sheet = wb.active
+
+    # Get the data from the sheet
+    data = []
+    for row in sheet.iter_rows(values_only=True):
+        data.append(row)
+
+    # Convert data to NumPy array
+    data = np.array(data[1:])  # Exclude header row
+
+    # Calculate standard deviation for each column
+    std_dev = np.std(data, axis=0)
+    mean = np.mean(data, axis=0)
+
+    # Highlight cells that are more than 2 standard deviations away in red
+    red_fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")  # Red color fill
+
+    for col_index, (column, std, avg) in enumerate(zip(data.T, std_dev, mean), start=1):
+        for cell_index, value in enumerate(column, start=2):
+            cell = sheet.cell(row=cell_index, column=col_index)
+            if value > avg + 2 * std or value < avg - 2 * std:
+                cell.fill = red_fill
+
+    # Save the updated workbook
+    wb.save(file_path)
+
+
 def main():
     bacnet = bacnetInitialize()
-    # deviceScan(bacnet)
+    deviceScan(bacnet)
     readAv(bacnet)
     readBv(bacnet)
+
 
     return
 
