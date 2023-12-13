@@ -118,6 +118,8 @@ def deviceScan(bacnet):
     # Write the DataFrame to an Excel file
     df.to_excel('device_info.xlsx', index=False)
 
+    print("Device scan complete.")
+
 def readAv(bacnet):
     # Read the existing Device Excel into a DataFrame
     df = pd.read_excel('device_info.xlsx')
@@ -132,10 +134,9 @@ def readAv(bacnet):
     # Iterate through AV ranges from the .ini file
     config = configparser.ConfigParser()
     config.read('settings.ini')
-    avRange = config.get('bacnet', 'avRange').split(';')
+    avRangeList = config.get('bacnet', 'avRange').split(';')
 
-
-    for avRange in avRange:
+    for avRange in avRangeList:
         # Check if it's a single AV or a range
         if '-' in avRange:
             start, end = avRange.split('-')
@@ -252,7 +253,7 @@ def main():
     bacnet = bacnetInitialize()
     # deviceScan(bacnet)
     readAv(bacnet)
-    readBv(bacnet)
+    # readBv(bacnet)
 
     return
 
