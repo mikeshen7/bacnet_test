@@ -32,7 +32,7 @@ import warnings
 import logging
 import math
 import datetime
-
+from dotenv import load_dotenv
 
 ### Logging Settings ###
 # Silence (use CRITICAL so not much messages will be sent)
@@ -72,8 +72,10 @@ class Device:
 
 ### FUNCTIONS ###
 def authenticate():
+    load_dotenv()
+
     # Define the correct password
-    correct_password = "SithLordShen"
+    correct_password = os.getenv("PASSWORD")
 
     # Prompt the user for a password
     password = input("Enter the password to run the program: ")

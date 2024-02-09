@@ -24722,3 +24722,28 @@
 2024-02-08 15:56:50,521 - DEBUG - value                datatype            
 2024-02-08 15:56:50,521 - DEBUG - 0.0                  <class 'bacpypes.primitivedata.Real'>
 2024-02-08 15:56:50,545 - INFO - output_to_excel successful
+2024-02-08 16:09:23,680 - INFO - Starting BAC0 version 23.07.03 (Lite)
+2024-02-08 16:09:23,680 - INFO - Use BAC0.log_level to adjust verbosity of the app.
+2024-02-08 16:09:23,680 - INFO - Ex. BAC0.log_level('silence') or BAC0.log_level('error')
+2024-02-08 16:09:23,680 - DEBUG - Configurating app
+2024-02-08 16:09:23,680 - INFO - Starting TaskManager
+2024-02-08 16:09:23,680 - DEBUG - Task Manager waiting for tasks...
+2024-02-08 16:09:23,680 - DEBUG - Task Manager Initiated
+2024-02-08 16:09:23,681 - INFO - Using ip : 192.168.105.40 on port 47808 | broadcast : 192.168.105.255
+2024-02-08 16:09:23,681 - DEBUG - Configurating app
+2024-02-08 16:09:23,717 - DEBUG - To be able to run the web server, you must install pandas, bokeh, flask and flask_bootstrap
+2024-02-08 16:09:23,717 - DEBUG - Those are not all installed so BAC0 will work in Lite mode only.
+2024-02-08 16:09:23,718 - DEBUG - Create Local Device
+2024-02-08 16:09:23,718 - DEBUG -   - request: <bacpypes.apdu.IAmRequest(0) instance at 0x1a9c15bc890>
+2024-02-08 16:09:23,718 - DEBUG - Starting
+2024-02-08 16:09:23,718 - INFO - Starting app...
+2024-02-08 16:09:23,719 - INFO - BAC0 started
+2024-02-08 16:09:23,719 - INFO - Registered as Simple BACnet/IP App
+2024-02-08 16:09:23,719 - DEBUG - Running
+2024-02-08 16:09:23,719 - DEBUG - finally
+2024-02-08 16:09:23,719 - INFO - Device instance (id) : 3056224
+2024-02-08 16:09:23,719 - DEBUG - do_iam
+2024-02-08 16:09:23,719 - DEBUG -   - request: <bacpypes.apdu.IAmRequest(0) instance at 0x1a9c03682d0>
+2024-02-08 16:09:23,725 - INFO - Update Local COV Task started (required to support COV)
+2024-02-08 16:09:24,737 - INFO - 192.168.105.38 network number is 2
+2024-02-08 16:09:24,818 - INFO - 192.168.105.7 network number is 999
