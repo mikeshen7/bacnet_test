@@ -1,0 +1,113 @@
+2024-02-08 10:29:16,738 - INFO - Writing to 1001:binaryOutput20 priorityArray priority 3.  Original value: None
+2024-02-08 10:29:17,815 - ERROR - write_point error.  error: APDU Abort Reason : unknownObject device: 1001 object_type: binaryOutput object_instance: 20 property: priorityArray index: 3
+2024-02-08 10:30:26,393 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 3.  Original value: inactive
+2024-02-08 10:31:06,039 - INFO - Writing to 1001:binaryOutput20 priorityArray priority 3.  Original value: error
+2024-02-08 10:31:07,126 - ERROR - write_point error.  error: APDU Abort Reason : unknownObject device: 1001 object_type: binaryOutput object_instance: 20 property: priorityArray index: 3
+2024-02-08 10:31:31,726 - INFO - Writing to 1001:binaryOutput20 priorityArray priority 3.  Original value: NR
+2024-02-08 10:31:32,764 - ERROR - write_point error.  error: APDU Abort Reason : unknownObject device: 1001 object_type: binaryOutput object_instance: 20 property: priorityArray index: 3
+2024-02-08 14:18:18,210 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 3.  Original value: inactive
+2024-02-08 14:18:18,210 - ERROR - write_point error.  error: undefined enumeration 'nan' device: 1001 object_type: binaryOutput object_instance: 0 property: priorityArray index: 3
+2024-02-08 14:18:19,243 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 4.  Original value: null
+2024-02-08 14:18:20,300 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 8.  Original value: null
+2024-02-08 14:18:20,378 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:18:20,378 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:18:20,379 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:18:20,379 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:18:20,379 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:18:20,380 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:18:20,380 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:18:20,380 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:18:20,381 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:18:20,381 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:18:20,381 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:18:20,381 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:18:20,382 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:18:20,382 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:19:44,837 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 3.  Original value: inactive
+2024-02-08 14:19:44,837 - ERROR - write_point error.  error: undefined enumeration 'nan' device: 1001 object_type: binaryOutput object_instance: 0 property: priorityArray index: 3
+2024-02-08 14:19:44,917 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 4.  Original value: inactive
+2024-02-08 14:19:47,057 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 8.  Original value: active
+2024-02-08 14:19:47,132 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:19:47,132 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:19:47,133 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:19:47,134 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:19:47,134 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:19:47,135 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:19:47,136 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:19:47,136 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:19:47,137 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:19:47,137 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:19:47,138 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:19:47,138 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:19:47,138 - INFO - Writing to 1001:nannan nan priority nan.  Original value: NR
+2024-02-08 14:19:47,139 - ERROR - write_point error.  error: invalid literal for int() with base 10: 'nan' device: 1001 object_type: nan object_instance: nan property: nan index: nan
+2024-02-08 14:27:19,113 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 3.  Original value: inactive
+2024-02-08 14:27:21,222 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 4.  Original value: inactive
+2024-02-08 14:27:23,356 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 8.  Original value: active
+2024-02-08 14:28:22,976 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 3.  Original value: null
+2024-02-08 14:28:25,127 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 4.  Original value: inactive
+2024-02-08 14:28:26,263 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 8.  Original value: active
+2024-02-08 14:30:05,963 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 3.  Original value: null
+2024-02-08 14:30:08,074 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 4.  Original value: null
+2024-02-08 14:30:10,224 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 8.  Original value: null
+2024-02-08 14:30:12,314 - INFO - Writing to 1101:binaryOutput0 priorityArray priority 3.  Original value: null
+2024-02-08 14:30:14,424 - INFO - Writing to 1101:binaryOutput0 priorityArray priority 4.  Original value: null
+2024-02-08 14:30:15,923 - INFO - Writing to 1101:binaryOutput0 priorityArray priority 8.  Original value: null
+2024-02-08 14:30:18,016 - INFO - Writing to 1601:binaryOutput0 priorityArray priority 3.  Original value: null
+2024-02-08 14:30:19,045 - INFO - Writing to 1601:binaryOutput0 priorityArray priority 4.  Original value: null
+2024-02-08 14:30:21,067 - INFO - Writing to 1601:binaryOutput0 priorityArray priority 8.  Original value: null
+2024-02-08 14:31:20,372 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 3.  Original value: inactive
+2024-02-08 14:31:20,425 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 4.  Original value: inactive
+2024-02-08 14:31:21,568 - INFO - Writing to 1001:binaryOutput0 priorityArray priority 8.  Original value: inactive
+2024-02-08 14:31:22,719 - INFO - Writing to 1101:binaryOutput0 priorityArray priority 3.  Original value: inactive
+2024-02-08 14:31:24,839 - INFO - Writing to 1101:binaryOutput0 priorityArray priority 4.  Original value: inactive
+2024-02-08 14:31:25,977 - INFO - Writing to 1101:binaryOutput0 priorityArray priority 8.  Original value: inactive
+2024-02-08 14:31:27,063 - INFO - Writing to 1601:binaryOutput0 priorityArray priority 3.  Original value: inactive
+2024-02-08 14:31:29,086 - INFO - Writing to 1601:binaryOutput0 priorityArray priority 4.  Original value: inactive
+2024-02-08 14:31:29,119 - INFO - Writing to 1601:binaryOutput0 priorityArray priority 8.  Original value: inactive
+2024-02-08 14:35:23,625 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000
+2024-02-08 14:35:24,673 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001
+2024-02-08 14:35:25,760 - INFO - Writing to 1100:device0 objectName priority 4.  Original value: DEV-1100
+2024-02-08 14:35:26,806 - INFO - Writing to 1101:device0 objectName priority 4.  Original value: DEV-1101
+2024-02-08 14:35:27,955 - INFO - Writing to 1200:device0 objectName priority 4.  Original value: DEV-1200
+2024-02-08 14:35:28,980 - INFO - Writing to 1601:device0 objectName priority 4.  Original value: DEV-1601
+2024-02-08 14:38:42,492 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000_test
+2024-02-08 14:38:43,549 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001_test
+2024-02-08 14:38:44,583 - INFO - Writing to 1100:device0 objectName priority 4.  Original value: DEV-1100_test
+2024-02-08 14:38:45,654 - INFO - Writing to 1101:device0 objectName priority 4.  Original value: DEV-1101_test
+2024-02-08 14:38:47,709 - INFO - Writing to 1200:device0 objectName priority 4.  Original value: DEV-1200_test
+2024-02-08 14:38:48,735 - INFO - Writing to 1601:device0 objectName priority 4.  Original value: DEV-1601_test
+2024-02-08 14:40:45,905 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000
+2024-02-08 14:40:46,964 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001
+2024-02-08 14:40:48,014 - INFO - Writing to 1100:device0 objectName priority 4.  Original value: DEV-1100
+2024-02-08 14:40:49,078 - INFO - Writing to 1101:device0 objectName priority 4.  Original value: DEV-1101
+2024-02-08 14:40:50,196 - INFO - Writing to 1200:device0 objectName priority 4.  Original value: DEV-1200
+2024-02-08 14:40:51,223 - INFO - Writing to 1601:device0 objectName priority 4.  Original value: DEV-1601
+2024-02-08 14:45:35,786 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000_test
+2024-02-08 14:45:37,849 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001_test
+2024-02-08 14:45:37,894 - INFO - Writing to 1100:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:45:38,988 - INFO - Writing to 1101:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:45:40,033 - INFO - Writing to 1200:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:45:42,062 - INFO - Writing to 1601:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:46:17,358 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000_test
+2024-02-08 14:46:18,416 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001_test
+2024-02-08 14:46:19,512 - INFO - Writing to 1100:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:46:21,564 - INFO - Writing to 1101:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:46:22,589 - INFO - Writing to 1200:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:46:23,616 - INFO - Writing to 1601:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:49:20,876 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000_test
+2024-02-08 14:49:22,920 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001_test
+2024-02-08 14:49:24,972 - INFO - Writing to 1100:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:49:27,038 - INFO - Writing to 1101:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:49:29,074 - INFO - Writing to 1200:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:49:31,099 - INFO - Writing to 1601:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:52:18,921 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000_test
+2024-02-08 14:52:19,971 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001_test
+2024-02-08 14:52:21,067 - INFO - Writing to 1100:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:52:22,102 - INFO - Writing to 1101:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:52:23,196 - INFO - Writing to 1200:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:52:24,234 - INFO - Writing to 1601:device0 objectName priority 4.  Original value: nan
+2024-02-08 14:55:00,421 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000_test
+2024-02-08 14:55:02,484 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001_test
+2024-02-08 14:55:46,798 - INFO - Writing to 1000:device0 objectName priority 4.  Original value: DEV-1000_test
+2024-02-08 14:55:48,863 - INFO - Writing to 1001:device0 objectName priority 4.  Original value: DEV-1001_test
