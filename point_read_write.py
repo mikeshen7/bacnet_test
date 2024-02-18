@@ -81,11 +81,19 @@ def authenticate():
     password = input("Enter the password to run the program: ")
 
     # Check if the entered password matches the correct password
-    if password == correct_password:
-        return True
-    else:
+    if password != correct_password:
         print("Incorrect password. Access denied.")
         return False
+
+    # Check date / time
+    current_date = datetime.datetime.now()
+    kill_date = datetime.datetime(2024, 4, 1)
+
+    if current_date > kill_date:
+        return False
+    
+    return True
+
 
 def bacnet_initialize():
     """
@@ -615,13 +623,6 @@ def execute_write():
 def main():
     # Authenticate the user
     if not authenticate():
-        return
-
-    current_date = datetime.datetime.now()
-    kill_date = datetime.datetime(2024, 3, 1)
-
-    if current_date > kill_date:
-        print("Dead!")
         return
 
     execute_read()
